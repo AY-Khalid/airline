@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 32px;
+        }
+        button{
+            width: 100px;
+            padding: 10px;
+            font-size: 24px;
+            margin-right: 20px;
+        }
+        #increase{
+            background-color: green;
+            color: white;
+        }
+        #decrease{
+            background-color: red;
+            color: white;
+        }
+    </style>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        let counter = 0
+        document.querySelector("#increase").onclick = ()=>{
+            document.querySelector("h1").innerHTML = ++counter;
+        }
+        document.querySelector("#decrease").onclick = ()=>{
+            document.querySelector("h1").innerHTML = --counter;
+        }
+
+
+    })
+
+</script>
+
+</head>
+<body>
+    <h1>0</h1>
+    <button id="decrease">-</button>
+    <button id="increase">+</button>
+</body>
+</html>
